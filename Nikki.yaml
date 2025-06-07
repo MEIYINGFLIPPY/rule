@@ -14,8 +14,8 @@ proxy-providers:
     header:
       User-Agent:
     #  - "Clash" 
-      - "mihomo"
-    #  - "Claash.meta"
+    #  - "mihomo"
+      - "Claash.meta"
  
 
 
@@ -73,7 +73,8 @@ tun:
   enable: true
   # system/gvisor/mixed
   stack: mixed
-  dns-hijack: ["any:53", "tcp://any:53"]
+  # 这里我屏蔽了劫持53
+  # dns-hijack: ["any:53", "tcp://any:53"]
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
@@ -81,6 +82,7 @@ tun:
 # DNS模块
 dns:
   enable: true
+  # 默认是1053，ui里我改成了7553
   listen: 0.0.0.0:1053
   ipv6: false
   respect-rules: true
@@ -107,11 +109,10 @@ dns:
   proxy-server-nameserver:
     - 223.5.5.5   
     - 119.29.29.29
-  # namesever尽量用运营商提供的DNS，这里也可以用adguardhome的地址
+  # namesever可以用运营商提供的DNS，这里也可以用adguardhome的地址，但是我使用adguardhome地址后无法上网
   nameserver:
-     - 192.168.100.1:533
-  #  - 116.116.116.116
-  #  - 221.5.88.88
+    - 223.5.5.5   
+    - 119.29.29.29
  
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
@@ -154,7 +155,6 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 # 后面添加no-resolve 表示此规则集不需要域名解析，直接匹配ip
 rules:
-  - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,private_domain,直连
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
