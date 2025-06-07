@@ -133,6 +133,7 @@ proxy-groups:
   - {name: 🎥 巴哈姆特, <<: *pr}
   - {name: 🚫 R18, <<: *pr}
   - {name: 📦 Docker, <<: *pr}
+  - {name: 🎮 游戏平台, <<: *pr}
 
   
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
@@ -172,6 +173,10 @@ rules:
   - RULE-SET,dlsite_domain,🚫 R18
   - RULE-SET,dmm_domain,🚫 R18
   - RULE-SET,docker_domain,📦 Docker
+  - RULE-SET,xbox_domain,🎮 游戏平台
+  - RULE-SET,playstation_domain,🎮 游戏平台
+  - RULE-SET,nintendo_domain,🎮 游戏平台
+  - RULE-SET,steam_domain,🎮 游戏平台
 
   - RULE-SET,gfw_domain,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
@@ -207,6 +212,10 @@ rule-providers:
   dlsite_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/dlsite.mrs"}
   dmm_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/dmm.mrs"}
   docker_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/docker.mrs"}
+  xbox_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/xbox.mrs"}
+  playstation_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/playstation.mrs"}
+  nintendo_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/nintendo.mrs"}
+  steam_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"}
   
   gfw_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"}
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
