@@ -16,9 +16,7 @@ proxy-providers:
     #  - "Clash" 
     #  - "mihomo"
       - "Claash.meta"
- 
-
-
+      
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
