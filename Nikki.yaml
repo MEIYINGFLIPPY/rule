@@ -154,9 +154,10 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 # 后面添加no-resolve 表示此规则集不需要域名解析，直接匹配ip
 rules:
+  - DOMAIN-SUFFIX,linux.do,🎯 直连
   - DOMAIN-SUFFIX,erogamescape.dyndns.org,🚫 R18
   - DOMAIN-SUFFIX,istoreos.com,👨🏿‍💻 GitHub
-  - RULE-SET,private_domain,直连
+  - RULE-SET,private_domain,🎯 直连
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
   - RULE-SET,youtube_domain,📹 YouTube
