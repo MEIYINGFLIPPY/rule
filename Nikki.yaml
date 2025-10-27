@@ -11,12 +11,6 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连
-    # 机场订阅请求头，默认clash.meta，能拉取就不自定义
-    header:
-      User-Agent:
-    #  - "Clash" 
-    #  - "mihomo"
-       - "Claash.meta"
       
 # 节点信息
 proxies:
