@@ -148,7 +148,10 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 # 后面添加no-resolve 表示此规则集不需要域名解析，直接匹配ip
 rules:
+  - DOMAIN-SUFFIX,gmgard.com,🇸🇬 加坡节点
+  - DOMAIN-SUFFIX,updates.maxmind.com,👨🏿‍💻 GitHub
   - DOMAIN-SUFFIX,linux.do,🎯 直连
+  - DOMAIN-SUFFIX,open2ch.net,🚫 R18
   - DOMAIN-SUFFIX,erogamescape.dyndns.org,🚫 R18
   - DOMAIN-SUFFIX,istoreos.com,👨🏿‍💻 GitHub
   - RULE-SET,private_domain,🎯 直连
