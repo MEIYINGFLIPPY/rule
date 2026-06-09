@@ -148,12 +148,15 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 # 后面添加no-resolve 表示此规则集不需要域名解析，直接匹配ip
 rules:
-  - DOMAIN-SUFFIX,gmgard.com,🇸🇬 加坡节点
+  - DOMAIN-SUFFIX,poihub.com,🇭🇰 香港节点
+  - DOMAIN-SUFFIX,poi6.net,🇭🇰 香港节点
+  - DOMAIN-SUFFIX,commander-one.com,🎯 直连
+  - DOMAIN-SUFFIX,tekqart.com,🇭🇰 香港节点
+  - DOMAIN-SUFFIX,exhentai.org,🇺🇲 美国节点
+  - DOMAIN-SUFFIX,erogame.space,🇭🇰 香港节点
   - DOMAIN-SUFFIX,updates.maxmind.com,👨🏿‍💻 GitHub
-  - DOMAIN-SUFFIX,linux.do,🎯 直连
   - DOMAIN-SUFFIX,open2ch.net,🚫 R18
   - DOMAIN-SUFFIX,erogamescape.dyndns.org,🚫 R18
-  - DOMAIN-SUFFIX,istoreos.com,👨🏿‍💻 GitHub
   - RULE-SET,private_domain,🎯 直连
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
